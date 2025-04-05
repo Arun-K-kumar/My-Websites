@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <form >
+    <h1 id="head">Temperature converter</h1>
+    <div id="div">
+        <div id="labels">
+        <input type="radio" class="radio"  id="Ck" name="title" onclick="kelvin()">
+        <label for="CelToKe" id="text">Celsius to Kelvin</label><br>
+        <input type="radio" class="radio"  id="Cf" name="title" onclick="faren()">
+        <label for="CelToFa" id="text">Celsius to Farenhiet</label><br>
+    </div>
+        <label id="label" for="number">Value</label>
+    <input type="number" required id="num"name="number" placeholder="0" max="50000"></div><br>
+    <button type="button" id="sub" onclick="convert()">Submit</button>
+    <p id="result"></p></form>
+</form>
+<script src="index.js"></script>
+</body>
+</html> 
