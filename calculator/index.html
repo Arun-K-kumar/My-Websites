@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="ttopdiv">
+    <div id="topdiv">
+    <div id="ztopdiv">
+    <h1 id="value">0</h1></div>
+    <div id="row1" class="R1">
+        <button id="b1" class="butt">1</button>
+        <button id="b2" class="butt">2</button>
+        <button id="b3" class="butt">3</button>
+        <button id="bAC" class="butt" style="padding-left: 8px;padding-right: 8px;">AC</button>
+    </div>
+    <div id="row2" class="R2">
+        <button id="b4" class="butt">4</button>
+        <button id="b5" class="butt">5</button>
+        <button id="b6" class="butt">6</button>
+        <button id="bmul" class="butt">*</button>
+    </div>
+    <div id="row3" class="R3">
+        <button id="b7" class="butt">7</button>
+        <button id="b8" class="butt">8</button>
+        <button id="b9" class="butt">9</button>
+        <button id="bdiv" class="butt">/</button>
+    </div>
+    <div id="row4" class="R4">
+        <button id="badd" class="butt">+</button>
+        <button id="bsub" class="butt">-</button>
+        <button id="brem" class="butt">%</button>
+        <button id="beq" class="butt">=</button>
+    </div>
+    </div>
+    </div>
+
+
+
+<script>
+    const n1=document.getElementById("b1");
+    const n2=document.getElementById("b2");
+    const n3=document.getElementById("b3");
+    const n4=document.getElementById("b4");
+    const n5=document.getElementById("b5");
+    const n6=document.getElementById("b6");
+    const n7=document.getElementById("b7");
+    const n8=document.getElementById("b8");
+    const n9=document.getElementById("b9");
+    const nAC=document.getElementById("bAC");
+    const h1 = document.getElementById("value");
+    const bmul = document.getElementById("bmul");
+    const bdiv = document.getElementById("bdiv");
+    const badd = document.getElementById("badd");
+    const bsub = document.getElementById("bsub");
+    const brem = document.getElementById("brem");
+    const beq = document.getElementById("beq");
+  let val = 0.0 ;
+  let num1 = 0.0;
+  let num2 = 0.0;
+  let op = " ";
+//   val = h1.value;
+//     val = Number(val);
+//     console.log(val);
+   
+    
+    n1.onclick=function(){
+       
+
+        if(h1.textContent % 10 != 0){
+            h1.textContent = (val * 10) + Number(n1.textContent);
+        }
+        else{
+            h1.textContent=n1.textContent;
+        }
+        val = Number(h1.textContent);
+    }
+    n2.onclick=function(){
+         
+          if(h1.textContent % 10 != 0){
+                h1.textContent = (val * 10) + Number(n2.textContent);
+          }
+          else{
+                h1.textContent=n2.textContent;
+          }
+          val = Number(h1.textContent);
+    }
+    n3.onclick=function(){
+       
+        if(h1.textContent % 10 != 0){
+            h1.textContent = (val * 10) + Number(n3.textContent);
+        }
+        else{
+            h1.textContent=n3.textContent;
+        }
+        val = Number(h1.textContent);
+    }
+    n4.onclick=function(){
+       
+        if(h1.textContent % 10 != 0){
+            h1.textContent = (val * 10) + Number(n4.textContent);
+        }
+        else{
+            h1.textContent=n4.textContent;
+        }
+        val = Number(h1.textContent);
+    }
+    n5.onclick=function(){
+         
+          if(h1.textContent % 10 != 0){
+                h1.textContent = (val * 10) + Number(n5.textContent);
+          }
+          else{
+                h1.textContent=n5.textContent;
+          }
+          val = Number(h1.textContent);
+    }
+    n6.onclick=function(){
+         
+          if(h1.textContent % 10 != 0){
+                h1.textContent = (val * 10) + Number(n6.textContent);
+          }
+          else{
+                h1.textContent=n6.textContent;
+          }
+          val = Number(h1.textContent);
+    }
+    n7.onclick=function(){
+       
+        if(h1.textContent % 10 != 0){
+            h1.textContent = (val * 10) + Number(n7.textContent);
+        }
+        else{
+            h1.textContent=n7.textContent;
+        }
+        val = Number(h1.textContent);
+    }
+    n8.onclick=function(){
+       
+        if(h1.textContent % 10 != 0){
+            h1.textContent = (val * 10) + Number(n8.textContent);
+        }
+        else{
+            h1.textContent=n8.textContent;
+        }
+        val = Number(h1.textContent);
+    }
+    n9.onclick=function(){
+         
+          if(h1.textContent % 10 != 0){
+                h1.textContent = (val * 10) + Number(n9.textContent);
+          }
+          else{
+                h1.textContent=n9.textContent;
+          }
+          val = Number(h1.textContent);
+    }
+
+    bAC.onclick=function(){
+        h1.textContent=0;
+        val=0;
+    }
+
+    bmul.onclick=function(){
+        h1.textContent= "*";
+        op = "*";
+        num1 = val;
+        val = 0;
+        
+    }
+
+    bdiv.onclick=function(){
+        h1.textContent= "/";
+        op = "/";
+        num1 = val;
+        val = 0;
+        
+    }
+    badd.onclick=function(){
+        h1.textContent= "+";
+        op = "+";
+        num1 = val;
+        val = 0;
+        
+    }
+    bsub.onclick=function(){
+        h1.textContent= "-";
+        op = "-";
+        num1 = val;
+        val = 0;
+        
+    }
+    brem.onclick=function(){
+        h1.textContent= "%";
+        op = "%";
+        num1 = val;
+        val = 0;
+        
+    }
+
+    beq.onclick=function(){
+        num2 = val;
+        if(op == "*"){
+            val = num1 * num2;
+        }
+        else if(op == "/"){
+            val = num1 / num2;
+        }
+        else if(op == "+"){
+            val = num1 + num2;
+        }
+        else if(op == "-"){
+            val = num1 - num2;
+        }
+        else if(op == "%"){
+            val = num1 % num2;
+        }
+        h1.textContent = val;
+    }
+
+</script>
+
+</body>
+<style>
+    h1{
+            text-align: center;
+            margin-bottom: 0%;
+            margin-top: 0%;
+        }
+
+        .butt{
+            text-align: center;
+            padding: 20px;
+            border-width: 3px;
+            border-color: rgb(111, 111, 111);
+            border-radius: 10px;
+            margin-bottom: 5px;
+            font-weight: bolder;
+            font-size: 20px;
+            background-color: rgb(158, 158, 158);
+            
+        }
+        .butt:hover{
+            background-color: rgb(69, 69, 69);
+            cursor: pointer;
+            color: white;
+            box-shadow: 3px 3px 3px rgb(31, 29, 54);
+        }
+        .R1, .R2, .R3, .R4 {
+            text-align: center;
+        }
+        #ttopdiv{
+            text-align: center;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black;
+            color: black;
+            display: inline-block;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: rgb(93, 87, 87);
+            box-shadow: 10px 10px 5px rgb(31, 29, 54);
+            
+        }
+        #ztopdiv{
+             text-align: center;
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            color: black;
+            display: inline-block;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-bottom: 15px;
+            padding-top: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: rgb(0, 92, 0);
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgb(47, 45, 69);
+        }
+        #topdiv{
+            text-align: center;
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            color: black;
+            display: inline-block;
+            padding: 10px;
+            margin-top: 30px;
+            background-color: rgb(199, 199, 199);
+        }
+        #topdiv:hover{
+            box-shadow: 10px 10px 5px rgb(81, 80, 80);
+        }
+        body{
+            text-align: center;
+            background-color: rgb(40, 40, 86);
+        }
+    
+</style>
+
+</html>
